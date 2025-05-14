@@ -10,7 +10,7 @@ if($_GET['o'] == 'add') {
 	echo "<div class='div-request div-hide'>editOrd</div>";
 }
 ?>
-
+<link rel="icon" type="image/jpg" href="logo.jpg" />
 <ol class="breadcrumb">
   <li><a href="dashboard.php">Accueil</a></li>
   <li>Commande</li>
@@ -272,7 +272,7 @@ if($_GET['o'] == 'add') {
 			    <div class="col-sm-10">
 			      <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Nom du client" autocomplete="off" value="<?php echo $data[2] ?>" />
 			    </div>
-			  </div> <
+			  </div>
 			  <div class="form-group">
 			    <label for="clientContact" class="col-sm-2 control-label">Contact </label>
 			    <div class="col-sm-10">
@@ -293,14 +293,14 @@ if($_GET['o'] == 'add') {
 			  	<tbody>
 			  		<?php
 
-			  		$orderItemSql = "SELECT order_id,order_id,product_id, quantity, rate, total FROM order_item WHERE order_item.order_id = '$orderId'";
+			  		$orderItemSql = "SELECT order_id,product_id, quantity, rate, total FROM order_item WHERE order_item.order_id = '$orderId'";
 						$orderItemResult = $connect->query($orderItemSql);
 						
 			  		$arrayNumber = 0;
 			  		
 			  		$x = 1;
 			  		while($orderItemData = $orderItemResult->fetch_array()) { 
-			  			 print_r($orderItemData); ?>
+			  			//  print_r($orderItemData); ?>
 			  			
 			  			<tr id="row<?php echo $x; ?>" class="<?php echo $arrayNumber; ?>">			  				
 			  				<td style="margin-left:20px;">
@@ -410,13 +410,13 @@ if($_GET['o'] == 'add') {
 				      <select class="form-control" name="paymentType" id="paymentType" >
 				      	<option value=""></option>
 				      	<option value="1" <?php if($data[11] == 1) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?> >Chèque</option>
 				      	<option value="2" <?php if($data[11] == 2) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?>  >Espèces</option>
 				      	<option value="3" <?php if($data[11] == 3) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?> >Carte de Crédit</option>
 				      </select>
 				    </div>
@@ -427,13 +427,13 @@ if($_GET['o'] == 'add') {
 				      <select class="form-control" name="paymentStatus" id="paymentStatus">
 				      	<option value=""></option>
 				      	<option value="1" <?php if($data[12] == 1) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?>  >Paiement Intégral</option>
 				      	<option value="2" <?php if($data[12] == 2) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?> >Paiement Anticipé</option>
 				      	<option value="3" <?php if($data[10] == 3) {
-				      		echo "sélectionné";
+				      		echo "selected";
 				      	} ?> >Pas De Paiement</option>
 				      </select>
 				    </div>
@@ -536,8 +536,8 @@ if($_GET['o'] == 'add') {
         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Fermer</button>
         <button type="button" class="btn btn-primary" id="removeOrderBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-ok-sign"></i> Supprimer</button>
       </div>
-    </div><
-  </div><
+    </div>
+  </div>
 </div>
 
 

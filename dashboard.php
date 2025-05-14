@@ -32,7 +32,7 @@ $connect->close();
 	}
 </style>
 
-
+	<link rel="icon" type="image/jpg" href="logo.jpg" />
     <link rel="stylesheet" href="assests/plugins/fullcalendar/fullcalendar.min.css">
     <link rel="stylesheet" href="assests/plugins/fullcalendar/fullcalendar.print.css" media="print">
 

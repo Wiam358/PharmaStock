@@ -8,7 +8,7 @@
 
 // $connect->close();
 ?>
-
+<link rel="icon" type="image/jpg" href="logo.jpg" />
 <div class="row">
 	<div class="col-md-12">
 		<ol class="breadcrumb">	  

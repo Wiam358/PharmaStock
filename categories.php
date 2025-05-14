@@ -1,5 +1,5 @@
 <?php require_once 'includes/header.php'; ?>
-
+<link rel="icon" type="image/jpg" href="logo.jpg" />
 
 <div class="row">
 	<div class="col-md-12">
